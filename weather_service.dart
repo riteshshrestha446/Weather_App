@@ -44,7 +44,7 @@
            .timeout(const Duration(seconds: 10));
 
        if (response.statusCode == 200) {
-         print("✅ Weather fetched successfully");
+         print(" Weather fetched successfully");
          return Weather.fromJson(jsonDecode(response.body));
        } else {
          print("Response status: ${response.statusCode}");
@@ -52,7 +52,7 @@
          throw Exception('Unable to detect your city');
        }
      } catch (e) {
-       print("⚠️ Exception: $e");
+       print(" Exception: $e");
        throw Exception('Unable to detect your city');
      }
    }
